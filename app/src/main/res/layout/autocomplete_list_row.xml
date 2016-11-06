@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/eventTitleText"
+        android:id="@+id/timeText"
+        android:layout_below="@+id/venueText"
+        android:paddingTop="10dp"
+        android:layout_toRightOf="@+id/imageLayout"
+        />
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imageLayout">
+    <com.homeaway.seatgeekevents.customviews.CircularNetworkImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/eventImage"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/noimage"
+        android:layout_alignTop="@+id/eventTitleText"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_favorite"
+        android:layout_gravity="bottom|right"
+        android:visibility="gone"
+        android:id="@+id/isFavorite"
+        />
+</FrameLayout>
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/venueText"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/eventTitleText"
+        android:layout_alignStart="@+id/eventTitleText" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventTitleText"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageLayout"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+</RelativeLayout>
